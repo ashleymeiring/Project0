@@ -1,3 +1,69 @@
-<html>
-	
+<!DOCTYPE html>
+<HTML lang="eng">
+	<head>
+		<title>Project Zero</title>
+		<style>
+			html, body{
+				font-family:"Segoe UI";
+				color:white;
+				width:100%;
+				margin:auto;
+			}
+
+			.flex-container{
+				display:flex;	
+				flex-wrap:wrap;
+				justify-content:center;
+				align-items:center;
+			}
+
+			.flex-item{
+			}
+
+			#header{
+				background:#A6235C;
+				flex-grow:1;
+			}
+
+			#main{
+				height:40em;
+			}
+
+			#content{
+				background:#9BC850;
+				height:100%;
+				flex-grow:3;
+			}
+
+			#sidebar{
+				background:#675BA7;
+				height:100%;
+				flex-grow:1;
+			}
+
+			#footer{
+				background:#FA972A;
+				flex-grow:1;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="flex-container" id="header">
+			<p class="flex-item">Header</p>
+		</header>
+		
+		<main class="flex-container" id="main">
+			<article class="flex-container" id="content">
+				<p class="flex-item">Content</p>
+			</article>
+			
+			<aside class="flex-container" id="sidebar">
+				<p class="flex-item">Sidebar</p>
+			</aside>
+		</main>
+
+		<footer class="flex-container" id="footer">
+			<p class="flex-item">Footer</p>
+		</footer>
+	</body>
 </html>
