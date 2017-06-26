@@ -4,64 +4,68 @@
 		<title>Project Zero</title>
 		<style>
 			html, body{
-				font-size:10px;
 				font-family:"Segoe UI";
+				font-size:10px;
 				color:white;
-				height:100%;
-				margin:auto;
+				margin:0;
+			}
+			
+			.flex-column{
+				display:flex;
+				flex-direction:column;
+				height:100vh;
+			}
+			
+			.flex-row{
+				display:flex;
+				flex-grow:1;				
 			}
 
-			.flex-container{
+			.container{
 				display:flex;	
-				flex-wrap:no-wrap;
 				justify-content:center;
 				align-items:center;
 			}
-
+			
 			#header{
 				background:#A6235C;
 				height:7rem;
+				width:100%;
 			}
-
-			#main{
-				height: calc(100% - 14rem);
-			}
-
+			
 			#content{
 				background:#9BC850;
-				height:100%;				
 				flex-grow:1;
 			}
-
+			
 			#sidebar{
 				background:#675BA7;
-				height:100%;
-				flex:0 0 30rem;
+				width:30rem;
 			}
-
+			
 			#footer{
-				height:7rem;
 				background:#FA972A;
+				height:7rem;
+				width:100%;
 			}
 		</style>
 	</head>
-	<body>
-		<header class="flex-container" id="header">
-			<p class="flex-item">Header</p>
+	<body class="flex-column">
+		<header id="header" class="container">
+			<h1>Footer</h1>
 		</header>
 		
-		<main class="flex-container" id="main">
-			<article class="flex-container" id="content">
-				<p class="flex-item">Content</p>
-			</article>
-			
-			<aside class="flex-container" id="sidebar">
-				<p class="flex-item">Sidebar</p>
+		<main class="flex-row">
+			<div id="content" class="container">
+				<h1>Content</h1>
+			</div>
+			<aside id="sidebar" class="container">
+				<h1>Sidebar</h1>
 			</aside>
 		</main>
-
-		<footer class="flex-container" id="footer">
-			<p class="flex-item">Footer</p>
+		
+		<footer id="footer" class="container">
+			<h1>Footer</h1>
 		</footer>
 	</body>
 </html>
